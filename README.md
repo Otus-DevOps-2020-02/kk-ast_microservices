@@ -55,7 +55,7 @@ kkast2020/comment       1.0                 defd21d83cfb        51 minutes ago  
 kkast2020/ui            1.0                 7241dbc130f5        52 minutes ago       786MB
 ```
 
-После перевода на alpine:
+После перевода на alpine, также пришлось добавить в список необходимых gem json:
 ```
 kkast2020/comment       2.1                 534b2903f588        About a minute ago   218MB
 kkast2020/ui            3.1                 ae8dbdfc9d69        8 seconds ago        221MB
@@ -66,6 +66,6 @@ kkast2020/ui            3.1                 ae8dbdfc9d69        8 seconds ago   
 docker kill $(docker ps -q)
 docker run -d --network=reddit --network-alias=post_db --network-alias=comment_db -v reddit_db:/data/db mongo:latest
 docker run -d --network=reddit --network-alias=post kkast2020/post:1.0
-docker run -d --network=reddit --network-alias=comment kkast2020/comment:2.1
-docker run -d --network=reddit -p 9292:9292 kkast2020/ui:3.1
+docker run -d --network=reddit --network-alias=comment kkast2020/comment:2.2
+docker run -d --network=reddit -p 9292:9292 kkast2020/ui:3.2
 ```
