@@ -69,3 +69,38 @@ docker run -d --network=reddit --network-alias=post kkast2020/post:1.0
 docker run -d --network=reddit --network-alias=comment kkast2020/comment:2.2
 docker run -d --network=reddit -p 9292:9292 kkast2020/ui:3.2
 ```
+## docker-4
+
+Цели:
+- Научиться работе с сетями в Docker
+- Научиться работать с docker-compose
+
+Утилиты:
+- bridge-utils
+
+Для просмотра net namespaces
+```
+sudo ln -s /var/run/docker/netns /var/run/netns
+sudo ip netns
+```
+
+Создание сетей:
+```
+docker network create back_net --subnet=10.0.2.0/24
+docker network create front_net --subnet=10.0.1.0/24
+```
+
+Подключение контейнера к сети:
+```
+docker network connect <network> <container>
+```
+
+## docker-compose
+
+Конфигурация в .yml (https://docs.docker.com/compose/compose-file/), параметры передаются через переменные окружения или .env файл, для изменения имени проекта используется переменная COMPOSE_PROJECT_NAME
+
+```
+docker-compose up -d #запуск
+docker-compose ps #список
+docker-compose down #выключение
+```
