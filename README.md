@@ -104,3 +104,22 @@ docker-compose up -d #запуск
 docker-compose ps #список
 docker-compose down #выключение
 ```
+
+## gitlab-ci-1
+
+Цели:
+- Подготовить инсталляцию Gitlab CI
+- Подготовить репозиторий с кодом приложения
+- Описать для приложения этапы пайплайна
+- Определить окружения
+
+Подготовлен, запущен и настроен свой инстанс с Gitlab, созданы пользователь для работы и проект. Настроена отправка кода.
+
+GitLab CI/CD, рассмотрены:
+- Pipelines https://docs.gitlab.com/ee/ci/pipelines/index.html
+- Environment variables https://docs.gitlab.com/ee/ci/variables/README.html
+- Environments https://docs.gitlab.com/ee/ci/environments/index.html
+- Job artifacts https://docs.gitlab.com/ee/ci/pipelines/job_artifacts.html
+- Cache dependencies https://docs.gitlab.com/ee/ci/caching/index.html
+- Runners https://docs.gitlab.com/runner/
+- Примеры выкладки https://docs.gitlab.com/ee/ci/examples/
