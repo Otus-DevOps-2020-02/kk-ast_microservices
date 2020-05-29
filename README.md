@@ -123,3 +123,26 @@ GitLab CI/CD, рассмотрены:
 - Cache dependencies https://docs.gitlab.com/ee/ci/caching/index.html
 - Runners https://docs.gitlab.com/runner/
 - Примеры выкладки https://docs.gitlab.com/ee/ci/examples/
+
+## monitoring-1
+
+Цели:
+
+- Знакомство с Prometheus: запуск и конфигурация
+- Настройка мониторинга состояния сервисов
+- Сбор метрик
+
+Сделано:
+- Подготовлено окружение
+- Запущен Prometheus, проанализирован веб-интерфейс
+- Создан docker образ Prometheus с предустановленной конфигурацией по мониторингу приложения
+- Подготовлен сценарий docker-compose для запуска приложения вместе с мониторингом, включая мониторинг состояния микросервисов
+- Проведены эксперименты по включению/отключению контейнеров и изменений в мониторинге
+
+Ссылки на репозитории:
+
+https://hub.docker.com/repository/docker/kkast2020/prometheus
+https://hub.docker.com/repository/docker/kkast2020/post
+https://hub.docker.com/repository/docker/kkast2020/comment
+https://hub.docker.com/repository/docker/kkast2020/ui
+https://hub.docker.com/repository/docker/kkast2020/otus-reddit

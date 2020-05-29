@@ -1,0 +1,8 @@
+#docker-compose.yml
+build_info.txt
+prometheus/
+.env
+*.swp
+
+## python specific
+*.pyc
