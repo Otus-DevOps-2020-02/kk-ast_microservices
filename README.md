@@ -20,11 +20,30 @@ docker kill $(docker ps -q) # убить контейнер
 docker rm/rmi # удалить контейнер/образ
 ```
 
-docker-machine
+docker-machine пример запуска:
+
 ```
-#пример запуска
-docker-machine create --driver google --google-machine-image https://www.googleapis.com/compute/v1/projects/ubuntu-os-cloud/global/images/family/ubuntu-1604-lts —google-machine-type n1-standard-1 --google-zone europe-west1-b docker-host
+$ export GOOGLE_PROJECT=_ваш-проект_
+
+# Создать докер-хост
+docker-machine create --driver google \
+    --google-machine-image https://www.googleapis.com/compute/v1/projects/ubuntu-os-cloud/global/images/family/ubuntu-1604-lts \
+    --google-machine-type n1-standard-1 \
+    --google-zone europe-west1-b \
+    docker-host
+
+# Настроить докер на удаленный хост
 eval $(docker-machine env docker-host)
+
+# Переключение на локальный докер
+eval $(docker-machine env --unset)
+
+# Узнать IP-адрес
+$ docker-machine ip docker-host
+
+# Удалить instance
+$ docker-machine rm docker-host
+
 ```
 
 Работа с Docker Hub
@@ -146,3 +165,18 @@ https://hub.docker.com/repository/docker/kkast2020/post
 https://hub.docker.com/repository/docker/kkast2020/comment
 https://hub.docker.com/repository/docker/kkast2020/ui
 https://hub.docker.com/repository/docker/kkast2020/otus-reddit
+
+## monitoring-2
+
+Сделано:
+- Настроен мониторинга контейнеров с помощью prometheus
+- Настроен сбор метрик уровня приложений и бизнес-логики
+- Настроена визуализации в grafana, дашборды мониторинга инфраструктуры и приложений
+
+Ссылки на репозитории:
+
+https://hub.docker.com/repository/docker/kkast2020/prometheus
+https://hub.docker.com/repository/docker/kkast2020/alertmanager
+https://hub.docker.com/repository/docker/kkast2020/post
+https://hub.docker.com/repository/docker/kkast2020/comment
+https://hub.docker.com/repository/docker/kkast2020/ui
