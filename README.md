@@ -182,7 +182,7 @@ https://hub.docker.com/repository/docker/kkast2020/comment
 https://hub.docker.com/repository/docker/kkast2020/ui
 
 
-##logging-1
+## logging-1
 
 Сделано:
 Настроен сбор неструктурированных/структурированных логов с помощью EFK (Elasticsearch, Fluentd, Kibana)
