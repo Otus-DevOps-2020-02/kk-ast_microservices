@@ -72,6 +72,6 @@ volumes:
 
 networks:
   front_net:
-    external: true
+#    external: true
   back_net:
-    external: true
+#    external: true

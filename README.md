@@ -180,3 +180,23 @@ https://hub.docker.com/repository/docker/kkast2020/alertmanager
 https://hub.docker.com/repository/docker/kkast2020/post
 https://hub.docker.com/repository/docker/kkast2020/comment
 https://hub.docker.com/repository/docker/kkast2020/ui
+
+
+##logging-1
+
+Сделано:
+Настроен сбор неструктурированных/структурированных логов с помощью EFK (Elasticsearch, Fluentd, Kibana)
+Настроен индекс в Kibana
+Настроена трассировка с помощью zipkin
+
+копирование данных из git
+```
+svn export https://github.com/express42/reddit.git/branches/logging/
+```
+
+Перезапуск отдельного контейнера с удалением:
+```
+docker-compose stop ui
+docker-compose rm ui
+docker-compose up -d
+```
