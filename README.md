@@ -200,3 +200,13 @@ docker-compose stop ui
 docker-compose rm ui
 docker-compose up -d
 ```
+
+## kubernetes-1
+
+Сделано:
+- Разобраны на практике все компоненты
+- Разобрался с описанием примитивов приложения
+- Запуск приложение с помощью Kubernetes
+
+Ссылки:
+https://github.com/kelseyhightower/kubernetes-the-hard-way
