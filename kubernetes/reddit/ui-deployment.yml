@@ -3,17 +3,27 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: ui-deployment
+  labels:
+    app: reddit
+    component: ui
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
-      app: ui
+      app: reddit
+      component: ui
   template:
     metadata:
-      name: ui
+      name: ui-pod
       labels:
-        app: ui
+        app: reddit
+        component: ui
     spec:
       containers:
-      - image: kkast2020/ui
+      - image: kkast2020/ui:logging
         name: ui
+        env:
+        - name: ENV
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.namespace

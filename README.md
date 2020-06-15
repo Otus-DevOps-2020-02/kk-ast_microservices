@@ -210,3 +210,27 @@ docker-compose up -d
 
 Ссылки:
 https://github.com/kelseyhightower/kubernetes-the-hard-way
+
+## kubernetes 2
+
+Сделано:
+
+- Установлен minikube
+- Настроен локальный старт приложения
+
+```
+minikube start --driver=virtualbox
+kubectl get nodes
+kubectl apply -f config_name.yml
+kubectl get kind_name
+kubectl get pods --selector component=component_name
+kubectl port-forward pod_name 8080:9292
+kubectl describe service service_name
+kubectl exec -ti pod_name nslookup comment
+```
+- В домашнем задании неверные конфиги - пришлось повозиться
+- Настроен GKE
+```
+kubectl get nodes -o wide
+kubectl describe service ui -n dev | grep NodePort
+```
