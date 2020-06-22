@@ -234,3 +234,39 @@ kubectl exec -ti pod_name nslookup comment
 kubectl get nodes -o wide
 kubectl describe service ui -n dev | grep NodePort
 ```
+
+## kubernetes-3
+
+ - Ingress Controller
+ - Secret
+ - LoadBalancer Service
+ - Network Policies
+```
+Multiple selectors
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: deny-db-traffic
+  labels:
+    app: reddit
+spec:
+  podSelector:
+    matchLabels:
+      app: reddit
+      component: mongo
+  policyTypes:
+  - Ingress
+  ingress:
+  - from:
+    - podSelector:
+        matchLabels:
+          app: reddit
+          component: comment
+    - podSelector:
+        matchLabels:
+          app: reddit
+          component: post
+```
+ - PersistentVolumes
+ - PersistentVolumeClaims
