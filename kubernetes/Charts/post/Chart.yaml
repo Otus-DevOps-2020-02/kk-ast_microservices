@@ -1,0 +1,7 @@
+name: ui
+version: 1.0.0
+description: OTUS reddit application post service
+maintainers:
+  - name: kkast2020
+  - email: kkostenko@assist.ru
+appVersion: 1.0
