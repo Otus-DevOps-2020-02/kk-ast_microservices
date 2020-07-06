@@ -1,5 +1,5 @@
-name: ui
-version: 1.0.0
+name: comment
+version: 1.0.2
 description: OTUS reddit application comment service
 maintainers:
   - name: kkast2020

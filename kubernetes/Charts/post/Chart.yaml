@@ -1,5 +1,5 @@
-name: ui
-version: 1.0.0
+name: post
+version: 1.0.1
 description: OTUS reddit application post service
 maintainers:
   - name: kkast2020
