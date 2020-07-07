@@ -273,6 +273,14 @@ spec:
 
 ## kubernetes 4
 
+Сделано:
+
+- Установлен helm2 и helm3
+- Настроен tiller
+- Подготовлены yaml для развертывания приложения в GKE
+- Развёрнут Gitlab из репо с помощью helm
+- Настроен запуск CI/CD в k8s
+
 - Ошибки:
 
 Error: release test-ui-1 failed: namespaces "default" is forbidden: User "system:serviceaccount:kube-system:default" cannot get resource "namespaces" in API group "" in the namespace "default"
